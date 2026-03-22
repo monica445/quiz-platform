@@ -64,9 +64,12 @@ const login = async (req, res) => {
       { expiresIn: "1h" }
     );
 
+    const { password: _, ...userData } = user;
+
     res.json({
       message: "Login successful",
-      token
+      token,
+      user: userData
     });
 
   } catch (error) {

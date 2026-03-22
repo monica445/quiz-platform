@@ -14,22 +14,10 @@ function ProtectedRoute({ children }) {
 function AppRoutes() {
   return (
     <Routes>
-      {/* Public routes */}
+      <Route path="/dashboard" element={<DashboardPage />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/signup" element={<SignupPage />} />
-
-      {/* Protected route */}
-      <Route
-        path="/dashboard"
-        element={
-          <ProtectedRoute>
-            <DashboardPage />
-          </ProtectedRoute>
-        }
-      />
-
-      {/* Redirect any unknown route */}
-      <Route path="*" element={<Navigate to="/login" />} />
+      <Route path="*" element={<Navigate to="/dashboard" />} />
     </Routes>
   );
 }
