@@ -7,12 +7,24 @@ export default {
   theme: {
     extend: {
       colors: {
-        white: '#F5F5F5',
-        softBlue: '#C7E2FF',
-        orchidPink: '#E774C7',
-        deepBlue: '#003893',
-        textPrimary: '#003893',
-        textSecondary: '#333',
+        background: '#F8FAFC',      
+        surface: '#FFFFFF',          
+
+        primary: '#2563EB',         
+        primaryLight: '#60A5FA',     
+        primaryDark: '#1E40AF',     
+
+        accent: '#06B6D4',           
+        accentLight: '#67E8F9',
+
+        textPrimary: '#0F172A',      
+        textSecondary: '#475569',   
+
+        success: '#10B981',
+        error: '#EF4444',
+        warning: '#F59E0B',
+
+        border: '#E2E8F0',
       },
       spacing: {
         xs: '4px',

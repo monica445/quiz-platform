@@ -10,13 +10,13 @@ export default function SignupPage() {
     const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
     const handleSubmit = async (e) => {
-    e.preventDefault();
-    setError('');
-    try {
-      await signup(form); 
-    } catch (err) {
-      setError(err.message || 'Signup failed');
-    }
+        e.preventDefault();
+        setError('');
+        try {
+            await signup(form); 
+        } catch (err) {
+            setError(err.message || 'Signup failed');
+        }
     };
     
     return (
@@ -60,7 +60,7 @@ export default function SignupPage() {
                     type="submit"
                     disabled={loading}
                     className={`w-full py-sm rounded-md text-white font-bold ${
-                        loading ? 'bg-blue-300 cursor-not-allowed' : 'bg-orchidPink hover:bg-pink-600'
+                        loading ? 'bg-blue-300 cursor-not-allowed' : 'bg-primary hover:bg-primaryDark'
                     }`}
                     >
                     {loading ? 'Signing Up...' : 'Sign Up'}
