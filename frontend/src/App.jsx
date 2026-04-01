@@ -5,6 +5,8 @@ import LoginPage from './pages/LoginPage.jsx';
 import SignupPage from './pages/SignupPage.jsx';
 import DashboardPage from './pages/DashboardPage.jsx';
 import { useContext } from 'react';
+import QuizPage from './pages/QuizPage.jsx';
+import ResultPage from './pages/ResultPage.jsx';
 
 function ProtectedRoute({ children }) {
   const { isAuthenticated } = useContext(AuthContext);
@@ -17,6 +19,22 @@ function AppRoutes() {
       <Route path="/dashboard" element={<DashboardPage />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/signup" element={<SignupPage />} />
+      <Route
+        path="/quizzes/:quizId"
+        element={
+          <ProtectedRoute>
+            <QuizPage />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/results/:attemptId"
+        element={
+          <ProtectedRoute>
+            <ResultPage />
+          </ProtectedRoute>
+        }
+      />
       <Route path="*" element={<Navigate to="/dashboard" />} />
     </Routes>
   );

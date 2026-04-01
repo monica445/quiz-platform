@@ -17,7 +17,7 @@ app.use(express.json());
 
 app.use("/api/auth", authRoutes);
 app.use("/api/quizzes", quizRoutes);
-app.use("/api/attemps", attemptRoutes);
+app.use("/api/attempts", attemptRoutes);
 
 app.listen(5000, () => {
   console.log('Server running on http://localhost:5000');
